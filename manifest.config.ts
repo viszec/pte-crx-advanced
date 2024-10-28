@@ -34,6 +34,9 @@ export default defineManifest(async (env) => ({
       all_frames: true,
     },
   ],
+  content_security_policy: {
+    extension_pages: "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'",
+  },
   permissions: ['tabs'],
   web_accessible_resources: [
     // {
